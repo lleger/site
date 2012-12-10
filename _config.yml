@@ -1,0 +1,10 @@
+auto: true
+server: true
+baseurl: /
+# url: /
+destination: ./public
+markdown: redcarpet
+pygments: true
+future: false
+lsi: true
+permalink: /:title
