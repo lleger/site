@@ -1,4 +1,4 @@
-# auto: true
+auto: true
 server: true
 baseurl: /
 # url: /
@@ -8,4 +8,4 @@ pygments: true
 future: false
 # lsi: true
 permalink: /:title
-exclude: [Gemfile, Gemfile.lock, components, component.json, README.md]
+exclude: [Gemfile, Gemfile.lock, components, component.json, README.md, scss]
