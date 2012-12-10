@@ -1,1 +1,4 @@
-.sass_cache
+Gemfile.lock
+.sass_cache/
+_site/
+public/
