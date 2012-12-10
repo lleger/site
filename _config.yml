@@ -8,4 +8,4 @@ pygments: true
 future: false
 # lsi: true
 permalink: /:title
-exclude: [Gemfile, Gemfile.lock, components, component.json]
+exclude: [Gemfile, Gemfile.lock, components, component.json, README.md]
