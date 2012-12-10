@@ -1,0 +1,7 @@
+{
+  "name": "lleger",
+  "version": "0.0.0",
+  "dependencies": {
+    "sass-twitter-bootstrap": "git@github.com:jlong/sass-twitter-bootstrap.git#~2.2.2"
+  }
+}
