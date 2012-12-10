@@ -1,4 +1,4 @@
-auto: true
+# auto: true
 server: true
 baseurl: /
 # url: /
@@ -6,5 +6,6 @@ destination: ./public
 markdown: redcarpet
 pygments: true
 future: false
-lsi: true
+# lsi: true
 permalink: /:title
+exclude: [Gemfile, Gemfile.lock]
