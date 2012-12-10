@@ -24,7 +24,7 @@ module JekyllAssetPipeline
 
     def convert
       return Sass::Engine.new(@content, syntax: :scss,
-                                        load_paths: ['.', './_components/sass-twitter-bootstrap/lib']).render
+                                        load_paths: ['.', './components/sass-twitter-bootstrap/lib']).render
     end
   end
 end
