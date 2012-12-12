@@ -6,4 +6,3 @@ This is the repo for my personal site, loganleger.com. It's powered by Jekyll. T
 
 - Favicon / Apple touch images
 - 404 page
-- Better SEO
