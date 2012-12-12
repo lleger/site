@@ -3,13 +3,8 @@ layout: default
 ---
 
 <div class="page-header">
-	<h2>{{ page.title }}</h2>
-	<section class="byline">
-    {{ page.date | date: "%B %e, %Y" }}
-  </section>
+	<h2>{{ page.title }} <span class="post-date">{{ page.date | date: "%B %e, %Y" }}</span></h2>
 	<hr />
 </div>
 
 {{ content }}
-
-<hr />
