@@ -2,6 +2,10 @@
 @import "sticky";
 @import "pygments";
 
+$green: #30AEA1;
+
+// Retina mixin
+
 @mixin image-2x($image, $width, $height) {
   @media (min--moz-device-pixel-ratio: 1.3),
          (-o-min-device-pixel-ratio: 2.6/2),
@@ -14,6 +18,8 @@
   }
 }
 
+// Mixins for TypeKit
+
 @mixin adelle-sans-light($style: normal) {
 	font-family: "adelle-sans";
 	font-weight: 100;
@@ -25,8 +31,7 @@
 	font-style: $style;
 }
 
-$green: #30AEA1;
-$dark-gray: darken(#f7f7f7, 35%);
+// Typography adjustments
 
 body {
 	font-family: "proxima-nova";
@@ -42,28 +47,14 @@ hr {
 	letter-spacing: 3px;
 	font-size: 20px;
 	border: none;
-	color: $dark-gray;
+	color: $grayLight;
 	
 	&::before {
 		content: '\2217\2217\2217\2217\2217';
 	}
 }
 
-.page-header {
-	border: none;
-	margin-top: 0px;
-	
-	p {
-		color: $dark-gray;
-		font-size: 22px;
-		line-height: 26px;
-	}
-	
-	hr {
-		margin-top: 0px;
-		margin-bottom: 0px;
-	}
-}
+// Structure styles
 
 header#site-header {
 	margin-bottom: 10px;
@@ -113,6 +104,8 @@ footer {
 	}
 }
 
+// Index styles
+
 p#index-blurb {
 	line-height: 28px;
 	font-size: 24px;
@@ -131,7 +124,6 @@ section#first-post {
 }
 
 section#post-listing {
-	
 	ul {
 		
 		li {
@@ -142,6 +134,8 @@ section#post-listing {
 		}
 	}
 }
+
+// Post styles
 
 article header#post-header {
 	h2, p {
@@ -155,6 +149,26 @@ article header#post-header {
 	margin-bottom: 25px;
 	color: $grayDark;
 }
+
+// Page styles
+
+.page-header {
+	border: none;
+	margin-top: 0px;
+	
+	p {
+		color: $grayLight;
+		font-size: 22px;
+		line-height: 26px;
+	}
+	
+	hr {
+		margin-top: 0px;
+		margin-bottom: 0px;
+	}
+}
+
+// About page image
 
 .logan-image {
 	@include hide-text;
