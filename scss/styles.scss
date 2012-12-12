@@ -112,6 +112,30 @@ p#index-blurb {
 	@include adelle-serif;
 }
 
+section#first-post {
+	h2 {
+		margin-top: 0px;
+	}
+}
+
+section#post-listing {
+	
+	ul {
+		
+		li {
+			font-size: 24px;
+			padding: 10px;
+			border-bottom: 1px solid #d3d3d3;
+			
+		}
+	}
+}
+
+span.post-date {
+	@include adelle-sans-light(italic);
+	font-size: $baseFontSize;
+}
+
 .logan-image {
 	@include hide-text;
 	width: 225px;

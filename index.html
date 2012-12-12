@@ -6,3 +6,22 @@ title: testing
 <p id="index-blurb">My name is Logan Leger. I&rsquo;m an engineer and entrepreneur in Baton Rouge, Louisiana. I co-founded and am CEO of <a href="http://newaperio.com">NewAperio</a>. This site contains an unsorted collection of my thoughts on programming and entrepreneurship.</p>
 
 <hr />
+
+<section id="first-post">
+	{% assign first_post = site.posts[0] %}
+	<h2>{{ first_post.title }} <span class="post-date">{{ first_post.date | date: "%B %e, %Y" }}</span></h2>
+	
+	<p>{{ first_post.content | truncatewords: 50}}</p>
+</section>
+
+<hr />
+
+<section id="post-listing">
+  <ul class="unstyled">
+    {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a> <span class="post-date">{{ post.date | date: "%B %e, %Y" }}</span>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
