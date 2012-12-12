@@ -9,7 +9,8 @@ title: testing
 
 <section id="first-post" class="clearfix">
 	{% assign first_post = site.posts[0] %}
-	<h2><a title="{{ first_post.title }}" href="{{ first_post.url }}">{{ first_post.title }}</a> <span class="post-date">{{ first_post.date | date: "%B %e, %Y" }}</span></h2>
+	<h2><a title="{{ first_post.title }}" href="{{ first_post.url }}">{{ first_post.title }}</a></h2>
+	<p class="post-date">{{ first_post.date | date: "%B %e, %Y" }}</p>
 	
 	{{ first_post.content | truncatewords: 50}}
 	
