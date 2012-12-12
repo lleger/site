@@ -6,6 +6,5 @@ destination: ./public
 markdown: redcarpet
 pygments: true
 future: false
-# lsi: true
 permalink: /:title
 exclude: [Gemfile, Gemfile.lock, components, component.json, README.md, scss]
