@@ -80,6 +80,11 @@ header {
 		&::after {
 			content: ' /'
 		}
+		
+		a, a:visited, a:hover {
+			color: $green;
+			text-decoration: none;
+		}
 	}
 	
 	nav {
