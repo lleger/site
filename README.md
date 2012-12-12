@@ -5,6 +5,5 @@ This is the repo for my personal site, loganleger.com. It's powered by Jekyll. T
 ## TODO
 
 - Favicon / Apple touch images
-- 404 page
 - Fancy markdown options
 - Add title attributes everywhere
