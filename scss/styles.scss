@@ -1,4 +1,5 @@
 @import "bootstrap";
+@import "sticky";
 
 @mixin image-2x($image, $width, $height) {
   @media (min--moz-device-pixel-ratio: 1.3),
@@ -10,6 +11,106 @@
     background-image: url($image);
     background-size: $width $height;
   }
+}
+
+@mixin adelle-sans-light($style: "normal") {
+	font-family: "adelle-sans";
+	font-weight: 100;
+	font-style: $style;
+}
+
+@mixin adelle-serif($style: "normal") {
+	font-family: "adelle";
+	font-style: $style;
+}
+
+$green: #30AEA1;
+$dark-gray: darken(#f7f7f7, 35%);
+
+body {
+	font-family: "proxima-nova";
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "adelle"
+}
+
+hr {
+	margin: 20px 0 25px 0;
+	text-align: center;
+	letter-spacing: 3px;
+	font-size: 20px;
+	border: none;
+	color: $dark-gray;
+	
+	&::before {
+		content: '\2217\2217\2217\2217\2217';
+	}
+}
+
+.page-header {
+	border: none;
+	margin-top: 0px;
+	
+	p {
+		color: $dark-gray;
+		font-size: 22px;
+		line-height: 26px;
+	}
+	
+	hr {
+		margin-bottom: 0px;
+	}
+}
+
+header {
+	margin-bottom: 10px;
+	padding: 25px 0 50px 0;
+	@include clearfix;
+	background-image: -webkit-radial-gradient(50% -2px, 350px 7px, rgba(162,168,184,0.45) -32%, #fff 100%);
+	background-repeat: no-repeat;
+	background-position: center 90px;
+	
+	h1 {
+		display: inline;
+		color: $green;		
+		@include adelle-sans-light(italic);
+		
+		&::after {
+			content: ' /'
+		}
+	}
+	
+	nav {
+		display: inline;
+		font-weight: bold;
+		
+		ul {
+			display: inline;			
+			margin: 0 auto;
+		}
+	}
+}
+
+footer {
+	border-top: 1px solid #d3d3d3;
+	margin-top: 25px;
+	padding-top: 10px;
+	
+	nav {
+	font-weight: bold;
+	
+		li:first-child {
+			padding-left: 0;
+		}
+	}
+}
+
+p#index-blurb {
+	padding-top: 15px;
+	line-height: 28px;
+	font-size: 24px;
+	@include adelle-serif;
 }
 
 .logan-image {
