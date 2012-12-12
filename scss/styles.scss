@@ -13,13 +13,13 @@
   }
 }
 
-@mixin adelle-sans-light($style: "normal") {
+@mixin adelle-sans-light($style: normal) {
 	font-family: "adelle-sans";
 	font-weight: 100;
 	font-style: $style;
 }
 
-@mixin adelle-serif($style: "normal") {
+@mixin adelle-serif($style: normal) {
 	font-family: "adelle";
 	font-style: $style;
 }
@@ -107,7 +107,6 @@ footer {
 }
 
 p#index-blurb {
-	padding-top: 15px;
 	line-height: 28px;
 	font-size: 24px;
 	@include adelle-serif;
