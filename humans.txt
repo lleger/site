@@ -1,0 +1,25 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# AUTHOR
+
+    Logan Leger -- @lleger
+
+# THANKS
+
+	 	To Melissa, for loving me.
+    And myself, for being so awesome.
+		And Baton Rouge, for being my home.
+		And LSMSA and LSU, for educating me.
+		And NewAperio, for being fun to work on.
+		
+		And all the wonderful people who made the open source
+		technology this site is built with.
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3
+    jQuery
+		SCSS, CoffeeScript
+		Bootstrap
+		Jekyll

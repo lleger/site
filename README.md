@@ -8,5 +8,4 @@ This is the repo for my personal site, loganleger.com. It's powered by Jekyll. T
 - Fancy markdown options
 - Add title attributes everywhere
 - Configure retina.js
-- humans.txt
 - robots.txt
