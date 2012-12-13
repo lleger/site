@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem 'jekyll'
+gem 'jekyll', github: "tombell/jekyll", branch: "redcarpet-update"
 gem 'sass'
-gem 'redcarpet', '~> 1.9'
+gem 'redcarpet'
 gem 'yui-compressor'

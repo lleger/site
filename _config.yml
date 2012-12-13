@@ -8,3 +8,6 @@ pygments: true
 future: false
 permalink: /:title
 exclude: [Gemfile, Gemfile.lock, components, component.json, README.md, scss]
+
+redcarpet:
+  extensions: [with_toc_data, smart]
