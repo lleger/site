@@ -3,6 +3,7 @@ module Jekyll
   # 
   # Note: This is configured to use the new css like syntax available in sass.
   require 'sass'
+  require 'yui/compressor'
   class SassConverter < Converter
     safe true
     priority :low
@@ -19,9 +20,8 @@ module Jekyll
       begin
         puts "Performing Sass Conversion."
         engine = Sass::Engine.new(content, syntax: :scss,
-                                            load_paths: ['.', './components/sass-twitter-bootstrap/lib', './scss'],
-                                            compress: true)
-        engine.render
+                                            load_paths: ['.', './components/sass-twitter-bootstrap/lib', './scss'])
+        return YUI::CssCompressor.new.compress(engine.render)
       rescue StandardError => e
         puts "!!! SASS Error: " + e.message
       end
