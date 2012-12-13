@@ -1,5 +1,13 @@
 ---
 ---
+
+$gridColumnWidth:         42px !default;
+$gridGutterWidth:         20px !default;
+$gridColumnWidth1200:     42px !default;
+$gridGutterWidth1200:     20px !default;
+$gridColumnWidth768:      42px !default;
+$gridGutterWidth768:      20px !default;
+
 @import "bootstrap";
 @import "responsive";
 @import "pygments";
