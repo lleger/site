@@ -1,8 +1,8 @@
-auto: true
-server: true
+# auto: true
+# server: true
 baseurl: /
 url: http://localhost:4000
-destination: ./public
+# destination: ./public
 markdown: redcarpet
 pygments: true
 future: false
@@ -11,3 +11,5 @@ exclude: [Gemfile, Gemfile.lock, components, component.json, README.md, scss]
 
 redcarpet:
   extensions: [with_toc_data, smart]
+
+cdn: http://dhbfcnn0uuyjj.cloudfront.net

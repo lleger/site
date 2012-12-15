@@ -8,6 +8,10 @@ $gridGutterWidth1200:     20px !default;
 $gridColumnWidth768:      42px !default;
 $gridGutterWidth768:      20px !default;
 
+@function cdn-image-path($imagePath) {
+	@return url("http://dhbfcnn0uuyjj.cloudfront.net" + $imagePath);
+}
+
 @import "bootstrap";
 @import "responsive";
 @import "pygments";
