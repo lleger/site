@@ -7,3 +7,4 @@ This is the repo for my personal site, loganleger.com. It's powered by Jekyll. T
 - Favicon / Apple touch images
 - Add title attributes everywhere
 - Configure retina.js
+- Analytics
