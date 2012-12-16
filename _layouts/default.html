@@ -9,8 +9,8 @@
 	  <link rel="alternate" type="application/rss+xml" href="/atom.xml" />
 	
 	  <meta name="author" content="Logan Leger" />
-	  <meta name="description" content="Writings on entrepreneurship and engineering by Logan Leger, CEO of NewAperio in Baton Rouge, LA." />
-		<meta name="keywords" content="logan leger, newaperio, baton rouge, entrepreneurship, engineering, objective c, ruby, rails, ios, iphone, ipad" />	
+	  <meta name="description" content="{% if page.seo.description == null %}Writings on entrepreneurship and engineering by Logan Leger, CEO of NewAperio in Baton Rouge, LA.{% else %}{{ page.seo.description }}{% endif %}" />
+		<meta name="keywords" content="{% if page.seo.keywords == null %}logan leger, newaperio, baton rouge, entrepreneurship, engineering, objective c, ruby, rails, ios, iphone, ipad{% else %}{{ page.seo.keywords }}{% endif %}" />	
 		<link rel="canonical" href="{{ site.url }}{{ page.url }}" />
 
 		<script type="text/javascript" src="//use.typekit.net/nhv3tio.js"></script>
