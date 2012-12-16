@@ -20,7 +20,7 @@ module Jekyll
       begin
         puts "Performing Sass Conversion."
         engine = Sass::Engine.new(content, syntax: :scss,
-                                            load_paths: ['.', './components/sass-twitter-bootstrap/lib', './scss'])
+                                            load_paths: ['.', './components/sass-twitter-bootstrap/lib', './_scss'])
         return YUI::CssCompressor.new.compress(engine.render)
       rescue StandardError => e
         puts "!!! SASS Error: " + e.message

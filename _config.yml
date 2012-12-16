@@ -7,7 +7,7 @@ markdown: redcarpet
 pygments: true
 future: false
 permalink: /:title
-exclude: [Gemfile, Gemfile.lock, components, component.json, README.md, scss]
+exclude: [Gemfile, Gemfile.lock, components, component.json, README.md]
 
 redcarpet:
   extensions: [with_toc_data, smart]
