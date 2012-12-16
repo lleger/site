@@ -20,8 +20,8 @@ class Jekyll < Thor
     create_file file do
       <<-EOS.gsub(/^ {6}/, '')
       ---
-      layout: post"
-      title: #{name}"
+      layout: post
+      title: #{name}
       ---
       EOS
     end
