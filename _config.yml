@@ -2,7 +2,7 @@ auto: true
 server: true
 baseurl: /
 url: http://localhost:4000
-destination: ./public
+# url: http://loganleger.com
 markdown: redcarpet
 pygments: true
 future: false
