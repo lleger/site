@@ -10,4 +10,4 @@ permalink: /:title
 exclude: [Gemfile, Gemfile.lock, components, component.json, README.md, jekyll.thor]
 
 redcarpet:
-  extensions: [with_toc_data, smart]
+  extensions: [with_toc_data, smart, autolink, fenced_code_blocks, superscript, tables]
