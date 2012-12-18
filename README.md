@@ -1,13 +1,20 @@
 # loganleger.com
 
-This is the repo for my personal site, loganleger.com. It's powered by Jekyll. This is currently under development. Dependencies are handled by Bundler (Ruby) and Bower (external assets).
+This is the repo for my personal site, loganleger.com. It's powered by Jekyll. This is currently under development. Dependencies are handled by Bundler (Ruby) and Bower (JS/CSS).
 
 ## TODO
 
 - Favicon / Apple touch images
-- Add title attributes everywhere
-- Configure retina.js
-- Thor listings: add timestamp column
+- Analytics
+- gzip?
+- Asset fingerprinting?
+
+## How To Make A New Post
+
+1. `thor jekyll:draft "My New Post"`
+2. Edit `./_drafts/my_new_post.mdown` until draft is finished and ready to publish.
+3. `thor jekyll:publish --latest`
+4. Deploy!
 
 ## Thor: Command Line Hotness
 
