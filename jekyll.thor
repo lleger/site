@@ -33,9 +33,9 @@ class Jekyll < Thor
     print_table(headers + Dir["_drafts/*"].map { |d| [File.mtime(d).strftime("%m/%d/%Y"), d] })
   end
 
-  desc "publish [FILE]", "publish a draft"
-  method_option :latest, aliases: "-l", type: :boolean, default: false, desc: "publish latest draft"
-  def publish(file = nil)
+  desc "post [FILE]", "turn a draft into a post"
+  method_option :latest, aliases: "-l", type: :boolean, default: false, desc: "post latest draft"
+  def post(file = nil)
     if options.latest?
       file = Dir.glob("_drafts/*").max_by { |f| File.mtime(f) }
     elsif file
@@ -47,12 +47,12 @@ class Jekyll < Thor
       files_array = Array[]
       files.each_with_index { |f, i| files_array << [i, f] }
       print_table(files_array)
-      choice = ask("Choose a draft to publish:", :blue)
+      choice = ask("Choose a draft to post:", :blue)
     end
     draft = file || files_array[choice.to_i][1]
     now = Date.today.strftime("%Y-%m-%d").gsub(/-0/,'-')
     mv draft, "_posts/#{now}-#{File.basename(draft)}"
-    say_status("publish", "#{draft}", :green)
+    say_status("post", "#{draft}", :green)
   end
   
   desc "posts", "list all posts"

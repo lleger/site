@@ -11,8 +11,8 @@ This is the repo for my personal site, loganleger.com. It's powered by Jekyll. T
 ## How To Make A New Post
 
 1. `thor jekyll:draft "My New Post"`
-2. Edit `./_drafts/my_new_post.mdown` until draft is finished and ready to publish.
-3. `thor jekyll:publish --latest`
+2. Edit `./_drafts/my_new_post.mdown` until draft is finished and ready to post.
+3. `thor jekyll:post --latest`
 4. Deploy!
 
 ## Thor: Command Line Hotness
@@ -22,7 +22,7 @@ This is the repo for my personal site, loganleger.com. It's powered by Jekyll. T
 - `thor jekyll:draft NAME`: creates a new blank post with the name *NAME* in the `./_drafts` folder (and makes that folder if it doesn't exist)
 - `thor jekyll:drafts`: lists all draft posts (files in `./drafts`)
 - `thor jekyll:posts`: lists all posts (files in `./posts`)
-- `thor jekyll:publish [FILE]`: publishes (moves from `./drafts` to `./posts` and renames file with timestamp) a draft with the given file path *FILE*, or publishes the latest draft with the `--latest` or `-l` flag, or gives a list of drafts to chose from
+- `thor jekyll:post [FILE]`: posts (moves from `./drafts` to `./posts` and renames file with timestamp) a draft with the given file path *FILE*, or posts the latest draft with the `--latest` or `-l` flag, or gives a list of drafts to chose from
 
 ## Custom Front Matter
 
