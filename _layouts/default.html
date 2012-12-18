@@ -5,16 +5,23 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		
     <link href="{{ "site.css" | cdn }}" rel="stylesheet">
-
-	  <link rel="alternate" type="application/rss+xml" href="/atom.xml" />
-	
-	  <meta name="author" content="Logan Leger" />
-	  <meta name="description" content="Writings on entrepreneurship and engineering by Logan Leger, CEO of NewAperio in Baton Rouge, LA." />
-		<meta name="keywords" content="logan leger, newaperio, baton rouge, entrepreneurship, engineering, objective c, ruby, rails, ios, iphone, ipad" />	
-		<link rel="canonical" href="{{ site.url }}{{ page.url }}" />
-
+    <script src="{{ "/js/retina.js" | cdn }}" type="text/javascript"></script>
 		<script type="text/javascript" src="//use.typekit.net/nhv3tio.js"></script>
 		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+	  <link rel="alternate" type="application/rss+xml" href="/atom.xml" />
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">	  
+	
+	  <meta name="author" content="Logan Leger" />
+	  <meta name="description" content="{% if page.seo.description == null %}Writings on entrepreneurship and engineering by Logan Leger, CEO of NewAperio in Baton Rouge, LA.{% else %}{{ page.seo.description }}{% endif %}" />
+		<meta name="keywords" content="{% if page.seo.keywords == null %}logan leger, newaperio, baton rouge, entrepreneurship, engineering, objective c, ruby, rails, ios, iphone, ipad{% else %}{{ page.seo.keywords }}{% endif %}" />	
+		<link rel="canonical" href="{{ site.url }}{{ page.url }}" />
+		
+		<meta property="og:title" content="Logan Leger">
+    <meta property="og:description" content="{% if page.seo.description == null %}Writings on entrepreneurship and engineering by Logan Leger, CEO of NewAperio in Baton Rouge, LA.{% else %}{{ page.seo.description }}{% endif %}">
+    <meta property="og:image" content="/images/logan.png">
+    
+      <link rel="icon" href="/favicon.png" type="file png"
   </head>
   <body>
 		<div id="wrap">
@@ -24,7 +31,7 @@
 					<nav>
 						<ul class="inline">
 							<li><a href="/">Home</a></li>
-							<li><a href="/about.html">About</a></li>
+							<li><a href="/about">About</a></li>
 							<li><a href="http://twitter.com/lleger">@lleger</a></li>
 							<li><a href="/atom.xml">RSS</a></li>
 						</ul>
@@ -43,7 +50,7 @@
 				<nav>
 					<ul class="inline pull-left">
 						<li><a href="/">Home</a></li>
-						<li><a href="/about.html">About</a></li>
+						<li><a href="/about">About</a></li>
 						<li><a href="http://twitter.com/lleger">@lleger</a></li>
 						<li><a href="/atom.xml">RSS</a></li>
 					</ul>
@@ -52,7 +59,11 @@
 				<p class="pull-right">Built in Baton Rouge, Louisiana.</p>				
 			</div>
 		</footer>
-		
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
+		<script>
+        var _gaq=[['_setAccount','UA-95824-1'],['_trackPageview']];
+        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+          g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g,s)}(document,'script'));
+    </script>
   </body>
 </html>

@@ -2,14 +2,14 @@
 # server: true
 baseurl: /
 url: http://localhost:4000
-# destination: ./public
+# url: http://loganleger.com
 markdown: redcarpet
 pygments: true
 future: false
 permalink: /:title
-exclude: [Gemfile, Gemfile.lock, components, component.json, README.md, scss]
+exclude: [Gemfile, Gemfile.lock, components, component.json, README.md, jekyll.thor]
 
 redcarpet:
-  extensions: [with_toc_data, smart]
+  extensions: [with_toc_data, smart, autolink, fenced_code_blocks, superscript, tables]
 
 cdn: http://dhbfcnn0uuyjj.cloudfront.net
