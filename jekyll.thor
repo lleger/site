@@ -29,7 +29,8 @@ class Jekyll < Thor
   
   desc "drafts", "list all drafts"
   def drafts
-    print_table(Dir["_drafts/*"].map { |d| [d] })
+    headers = [["Date", "Name"], ["----", "----"]]
+    print_table(headers + Dir["_drafts/*"].map { |d| [File.mtime(d).strftime("%m/%d/%Y"), d] })
   end
 
   desc "publish [FILE]", "publish a draft"
@@ -56,6 +57,7 @@ class Jekyll < Thor
   
   desc "posts", "list all posts"
   def posts
-    print_table(Dir["_posts/*"].map { |p| [p] })
+    headers = [["Date", "Name"], ["----", "----"]]    
+    print_table(headers + Dir["_posts/*"].map { |p| [File.mtime(p).strftime("%m/%d/%Y"), p] })
   end
 end
