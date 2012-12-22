@@ -3,3 +3,4 @@ Gemfile.lock
 _site/
 public/
 components/
+_s3.yml
