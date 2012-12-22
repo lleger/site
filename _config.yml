@@ -1,8 +1,15 @@
+# Development settings
 # auto: true
 # server: true
-baseurl: /
 url: http://localhost:4000
+# /development
+
+# Production settings
 # url: http://loganleger.com
+cdn: http://assets.loganleger.com
+# /production
+
+baseurl: /
 markdown: redcarpet
 pygments: true
 future: false
@@ -11,5 +18,3 @@ exclude: [Gemfile, Gemfile.lock, components, component.json, README.md, jekyll.t
 
 redcarpet:
   extensions: [with_toc_data, smart, autolink, fenced_code_blocks, superscript, tables]
-
-cdn: http://dhbfcnn0uuyjj.cloudfront.net
