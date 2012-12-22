@@ -5,15 +5,16 @@ This is the repo for my personal site, loganleger.com. It's powered by Jekyll. T
 ## TODO
 
 - Analytics
-- gzip?
-- Asset fingerprinting?
+- Better bundler integration
+- Clean up thor file
 
 ## How To Make A New Post
 
 1. `thor jekyll:draft "My New Post"`
 2. Edit `./_drafts/my_new_post.mdown` until draft is finished and ready to post.
 3. `thor jekyll:post --latest`
-4. Deploy!
+4. `jekyll`
+5. `thor jekyll:publish`
 
 ## Thor: Command Line Hotness
 
@@ -23,6 +24,7 @@ This is the repo for my personal site, loganleger.com. It's powered by Jekyll. T
 - `thor jekyll:drafts`: lists all draft posts (files in `./drafts`)
 - `thor jekyll:posts`: lists all posts (files in `./posts`)
 - `thor jekyll:post [FILE]`: posts (moves from `./drafts` to `./posts` and renames file with timestamp) a draft with the given file path *FILE*, or posts the latest draft with the `--latest` or `-l` flag, or gives a list of drafts to chose from
+- `thor jekyll:publish`: deploys to S3/Cloudfront
 
 ## Custom Front Matter
 
