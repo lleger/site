@@ -17,7 +17,7 @@ This is the repo for my personal site, loganleger.com. It's powered by Jekyll. T
 
 ## Thor: Command Line Hotness
 
-[Thor][http://github.com/wycats/thor] is configured to provide some wonderful tools to make blogging easier. To list the available commands, use `thor list`. To get help on a command, including its usage and parameters, use `thor help <command>`.
+[Thor](http://github.com/wycats/thor) is configured to provide some wonderful tools to make blogging easier. To list the available commands, use `thor list`. To get help on a command, including its usage and parameters, use `thor help <command>`.
   
 - `thor jekyll:draft NAME`: creates a new blank post with the name *NAME* in the `./_drafts` folder (and makes that folder if it doesn't exist)
 - `thor jekyll:drafts`: lists all draft posts (files in `./drafts`)
