@@ -1,12 +1,34 @@
 # loganleger.com
 
-This is the repo for my personal site, loganleger.com. It's powered by Jekyll. This is currently under development. Dependencies are handled by Bundler (Ruby) and Bower (JS/CSS).
+This is the repo for my personal site, loganleger.com. It's powered by Jekyll. This is currently under development (and probably will always be).
 
 ## TODO
 
 - Analytics
-- Better bundler integration
 - Clean up thor file
+- Fix cf/cnames issue
+- Image compression (smusher, optipng, jpegtran)
+- Add some tests for thor functionality
+
+## Thor: Command Line Hotness
+
+[Thor](http://github.com/wycats/thor) is configured to provide some wonderful tools to make blogging easier. To list the available commands, use `thor list`. To get help on a command, including its usage and parameters, use `thor help <command>`.
+
+| Command       | Functionality |
+| ------------- | ------------- |
+| `thor jekyll:draft NAME` | creates a new blank post with the name *NAME* in the `./_drafts` folder (and makes that folder if it doesn't exist) |
+| `thor jekyll:drafts` | lists all draft posts (files in `./drafts`) |
+| `thor jekyll:posts` | lists all posts (files in `./posts`) |
+| `thor jekyll:post [FILE]` | posts (moves from `./drafts` to `./posts` and renames file with timestamp) a draft with the given file path *FILE*, or posts the latest draft with the `--latest` or `-l` flag, or gives a list of drafts to chose from |
+| `thor jekyll:publish` | deploys to S3/Cloudfront |
+| `thor jekyll:bootstrap` | install all dependencies, or check if present with `-c` or `--check` flag
+
+## Bootstrap
+
+Before you do anything, you'll need to install the dependencies. System utilities are handled by Homebrew, Ruby Gems by Bundler and JS/CSS by Bower. A thor command to check and install dependencies is available.
+
+- `thor jekyll:bootstrap`: install all dependencies
+- `thor jekyll:bootstrap --check`: check all dependencies (no action taken)
 
 ## How To Make A New Post
 
@@ -15,16 +37,6 @@ This is the repo for my personal site, loganleger.com. It's powered by Jekyll. T
 3. `thor jekyll:post --latest`
 4. `jekyll`
 5. `thor jekyll:publish`
-
-## Thor: Command Line Hotness
-
-[Thor](http://github.com/wycats/thor) is configured to provide some wonderful tools to make blogging easier. To list the available commands, use `thor list`. To get help on a command, including its usage and parameters, use `thor help <command>`.
-  
-- `thor jekyll:draft NAME`: creates a new blank post with the name *NAME* in the `./_drafts` folder (and makes that folder if it doesn't exist)
-- `thor jekyll:drafts`: lists all draft posts (files in `./drafts`)
-- `thor jekyll:posts`: lists all posts (files in `./posts`)
-- `thor jekyll:post [FILE]`: posts (moves from `./drafts` to `./posts` and renames file with timestamp) a draft with the given file path *FILE*, or posts the latest draft with the `--latest` or `-l` flag, or gives a list of drafts to chose from
-- `thor jekyll:publish`: deploys to S3/Cloudfront
 
 ## Custom Front Matter
 
