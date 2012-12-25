@@ -1,6 +1,4 @@
 module Jekyll
-  require 'sass'
-  require 'yui/compressor'
   class SassConverter < Converter
     safe true
     priority :low
