@@ -1,8 +1,7 @@
-require 'yaml'
-require 'fileutils'
-require 'digest'
-require 'fog'
-require 'mime/types'
+require "rubygems"
+require "bundler/setup"
+
+Bundler.require(:default)
 
 class Jekyll < Thor
   include FileUtils
