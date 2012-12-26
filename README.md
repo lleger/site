@@ -5,9 +5,9 @@ This is the repo for my personal site, loganleger.com. It's powered by Jekyll. T
 ## TODO
 
 - Analytics
-- Clean up thor file
 - Fix cf/cnames issue
 - Add some tests for thor functionality
+- Guard
 
 ## Thor: Command Line Hotness
 
