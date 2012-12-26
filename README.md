@@ -8,6 +8,11 @@ This is the repo for my personal site, loganleger.com. It's powered by Jekyll. T
 - Fix cf/cnames issue
 - Add some tests for thor functionality
 
+### Some things I'm still considering
+
+- **Gitignore drafts**: Currently not doing this, but I'm not sure I need to track these with git. Especially with the following.
+- **Dropbox sync**: I have my drafts and posts folder in Dropbox, so I can make changes to posts on-the-go. I can't publish these changes until I get back to my computer, however. With this system in mind, and with my use of various Markdown editors, I need to reconsider how the Thor commands work. For example, I probably want to just create a new draft manually in iA Writer with no YAML front matter and with a regular filename ("My New Post.md") and use Thor to change the filename, add the front matter, and move the file.
+
 ## Thor: Command Line Hotness
 
 [Thor](http://github.com/wycats/thor) is configured to provide some wonderful tools to make blogging easier. To list the available commands, use `thor list`. To get help on a command, including its usage and parameters, use `thor help <command>`.
