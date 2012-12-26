@@ -21,14 +21,11 @@ This is the repo for my personal site, loganleger.com. It's powered by Jekyll. T
 | `thor jekyll:posts` | lists all posts (files in `./posts`) |
 | `thor jekyll:post [FILE]` | posts (moves from `./drafts` to `./posts` and renames file with timestamp) a draft with the given file path *FILE*, or posts the latest draft with the `--latest` or `-l` flag, or gives a list of drafts to chose from |
 | `thor jekyll:publish` | deploys to S3/Cloudfront |
-| `thor jekyll:bootstrap` | install all dependencies, or check if present with `-c` or `--check` flag
+| `thor jekyll:bootstrap` | check for dependencies |
 
 ## Bootstrap
 
-Before you do anything, you'll need to install the dependencies. System utilities are handled by Homebrew, Ruby Gems by Bundler and JS/CSS by Bower. A thor command to check and install dependencies is available.
-
-- `thor jekyll:bootstrap`: install all dependencies
-- `thor jekyll:bootstrap --check`: check all dependencies (no action taken)
+Before you do anything, you'll need to install the dependencies. System utilities are handled by Homebrew, Ruby Gems by Bundler and JS/CSS by Bower. A Thor command to check dependencies is available: `thor jekyll:bootstrap`.
 
 ## How To Make A New Post
 

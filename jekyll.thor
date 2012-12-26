@@ -138,10 +138,54 @@ class Jekyll < Thor
     end
   end
   
+  desc "dependencies", "check dependencies"
+  def dependencies
+    if installed?("brew")
+      say_status("installed", "brew", :green)
+    else
+      say_status("missing", "brew", :red)
+      say("Visit http://mxcl.github.com/homebrew/ to install")
+    end
+    
+    %w{ruby npm gifsicle jpegoptim optipng pngcrush}.each do |system|
+      if installed?(system)
+        say_status("installed", system, :green)
+      else
+        say_status("missing", system, :red)
+        say("Use `brew install #{system}` to install")
+      end
+    end
+    
+    %w{advancecomp jpeg}.each do |system|
+      say_status("check", system, :blue)
+      say("Use `brew install #{system}` to install if not present")
+    end
+
+    if installed?("bundle")
+      say_status("installed", "bundle", :green)
+    else
+      say_status("missing", "bundle", :red)
+      say("Use `gem install bundler` to install")
+    end
+
+    if installed?("bower")
+      say_status("installed", "bower", :green)
+    else
+      say_status("missing", "bower", :red)
+      say("Use `npm install bower` to install")
+    end    
+    
+    say("Run `bundle install` and `bower install` to finish bootstrapping")
+  end
+  
   private
   
   def gzip_file(filename)
     `gzip -9 #{filename}`
     mv filename + ".gz", filename
+  end
+  
+  def installed?(command)
+    !`which #{command}`.empty?
   end
 end
