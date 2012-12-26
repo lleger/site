@@ -7,7 +7,6 @@ This is the repo for my personal site, loganleger.com. It's powered by Jekyll. T
 - Analytics
 - Clean up thor file
 - Fix cf/cnames issue
-- Image compression (smusher, optipng, jpegtran)
 - Add some tests for thor functionality
 
 ## Thor: Command Line Hotness
