@@ -10,7 +10,7 @@ class Jekyll < Thor
   desc "draft NAME", "create a new draft post"
   def draft(name)
     slug = name.downcase.gsub(/ +/,'-').gsub(/[^-\w]/,'').sub(/-+$/,'')
-    file = "_drafts/" + slug + ".mdown"
+    file = "_drafts/" + slug + ".md"
     mkdir_p "_drafts"
     if File.exists?(file)
       say_status("error", "#{file} already exists", :red)
