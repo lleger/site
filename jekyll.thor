@@ -175,6 +175,8 @@ class Jekyll < Thor
       say("Use `npm install bower` to install")
     end    
     
+    say_status("missing", "_s3.yml", :red) if !File.exists?("_s3.yml")
+    
     say("Run `bundle install` and `bower install` to finish bootstrapping")
   end
   
