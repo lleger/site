@@ -7,7 +7,6 @@ This is the repo for my personal site, loganleger.com. It's powered by Jekyll. T
 - Analytics
 - Fix cf/cnames issue
 - Add some tests for thor functionality
-- Guard
 
 ## Thor: Command Line Hotness
 
@@ -22,6 +21,10 @@ This is the repo for my personal site, loganleger.com. It's powered by Jekyll. T
 | `thor jekyll:publish` | deploys to S3/Cloudfront |
 | `thor jekyll:bootstrap` | check for dependencies |
 
+## Local Development: Guard + Foreman
+
+Development is made nicer with Guard and Foreman. When a file changes (or a new gem is added), Guard rebuilds the site and loads it up at `http://localhost:4000`. Foreman is used to manage the Guard and Jekyll server processes. To get everything running, type `foreman start`.
+
 ## Bootstrap
 
 Before you do anything, you'll need to install the dependencies. System utilities are handled by Homebrew, Ruby Gems by Bundler and JS/CSS by Bower. A Thor command to check dependencies is available: `thor jekyll:bootstrap`.
@@ -31,7 +34,7 @@ Before you do anything, you'll need to install the dependencies. System utilitie
 1. `thor jekyll:draft "My New Post"`
 2. Edit `./_drafts/my_new_post.mdown` until draft is finished and ready to post.
 3. `thor jekyll:post --latest`
-4. `jekyll`
+4. `jekyll` (Not necessary with Foreman + Guard set up.)
 5. `thor jekyll:publish`
 
 ## Custom Front Matter
