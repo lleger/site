@@ -4,3 +4,4 @@ _site/
 public/
 components/
 _s3.yml
+.guard_history
