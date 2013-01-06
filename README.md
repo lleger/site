@@ -5,13 +5,8 @@ This is the repo for my personal site, loganleger.com. It's powered by Jekyll. T
 ## TODO
 
 - Analytics
-- Fix cf/cnames issue
 - Add some tests for thor functionality
-
-### Some things I'm still considering
-
-- **Gitignore drafts**: Currently not doing this, but I'm not sure I need to track these with git. Especially with the following.
-- **Dropbox sync**: I have my drafts and posts folder in Dropbox, so I can make changes to posts on-the-go. I can't publish these changes until I get back to my computer, however. With this system in mind, and with my use of various Markdown editors, I need to reconsider how the Thor commands work. For example, I probably want to just create a new draft manually in iA Writer with no YAML front matter and with a regular filename ("My New Post.md") and use Thor to change the filename, add the front matter, and move the file.
+- Revised drafts workflow
 
 ## Thor: Command Line Hotness
 
@@ -24,7 +19,7 @@ This is the repo for my personal site, loganleger.com. It's powered by Jekyll. T
 | `thor jekyll:posts` | lists all posts (files in `./posts`) |
 | `thor jekyll:post [FILE]` | posts (moves from `./drafts` to `./posts` and renames file with timestamp) a draft with the given file path *FILE*, or posts the latest draft with the `--latest` or `-l` flag, or gives a list of drafts to chose from |
 | `thor jekyll:publish` | deploys to S3/Cloudfront |
-| `thor jekyll:bootstrap` | check for dependencies |
+| `thor jekyll:dependencies` | check for dependencies |
 
 ## Local Development: Guard + Foreman
 
@@ -32,7 +27,7 @@ Development is made nicer with Guard and Foreman. When a file changes (or a new 
 
 ## Bootstrap
 
-Before you do anything, you'll need to install the dependencies. System utilities are handled by Homebrew, Ruby Gems by Bundler and JS/CSS by Bower. A Thor command to check dependencies is available: `thor jekyll:bootstrap`.
+Before you do anything, you'll need to install the dependencies. System utilities are handled by Homebrew, Ruby Gems by Bundler and JS/CSS by Bower. A Thor command to check dependencies is available: `thor jekyll:dependencies`.
 
 ## How To Make A New Post
 
